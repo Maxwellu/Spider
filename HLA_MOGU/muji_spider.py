@@ -47,24 +47,24 @@ def main():
     start_time = datetime.now()
 
     # 确认cookie正常
-    # repeat_login()
+    repeat_login()
 
     # 删除不合规范的csv
-    # delete_barbarism_csv(file_path_1)
-    # delete_barbarism_csv(file_path_2)
-    # delete_barbarism_csv(file_path_3)
+    delete_barbarism_csv(file_path_1)
+    delete_barbarism_csv(file_path_2)
+    delete_barbarism_csv(file_path_3)
 
     # 将IP添加到白名单
-    # charge_white_list()
+    charge_white_list()
 
     # 第一步, 爬取所有产品
-    # main_product()
-    # logger.info('main_product finished, please wait 30 seconds!')
+    main_product()
+    logger.info('main_product finished, please wait 30 seconds!')
 
-    # time.sleep(30)
+    time.sleep(30)
 
     # 第二步, 爬取商品URL
-    # main_merchandise_url()
+    main_merchandise_url()
     all_data = read_from_csv(file_path_2)
     for _ in all_data:
         url_queue.put(_)
